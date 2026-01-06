@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parent Wallet Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <h1>👨‍👩‍👧 Parent Digital Wallet</h1>
+  <p>Manage your child's spending smartly</p>
+</header>
+
+<div class="dashboard">
+
+  <!-- Parent Card -->
+  <div class="card profile">
+    <h2><i class="fa fa-user"></i> Parent Profile</h2>
+    <input type="text" placeholder="Parent Name">
+    <input type="email" placeholder="Email">
+    <button>Register</button>
+  </div>
+
+  <!-- Add Child -->
+  <div class="card">
+    <h2><i class="fa fa-child"></i> Add Child</h2>
+    <input type="text" id="childName" placeholder="Child Name">
+    <button onclick="addChild()">Add Child</button>
+  </div>
+
+  <!-- Wallet -->
+  <div class="card wallet">
+    <h2><i class="fa fa-wallet"></i> Child Wallet</h2>
+    <select id="childSelect"></select>
+    <input type="number" id="amount" placeholder="Add Amount (₹)">
+    <button onclick="addFunds()">Add Funds</button>
+  </div>
+
+  <!-- Spending Limits -->
+  <div class="card">
+    <h2><i class="fa fa-chart-pie"></i> Spending Limits</h2>
+    <input type="number" placeholder="Daily Limit">
+    <input type="number" placeholder="Weekly Limit">
+    <input type="number" placeholder="Monthly Limit">
+    <button>Save Limits</button>
+  </div>
+
+  <!-- Transactions -->
+  <div class="card transactions">
+    <h2><i class="fa fa-list"></i> Transactions</h2>
+    <ul id="history"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
